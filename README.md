@@ -1,5 +1,5 @@
 # WebCeph2k Dataset and implementation code
-## WebCeph2k: A New Benchmark for Cephalometric Landmarks Localization in Orthodontic
+## WebCeph2k: A New Benchmark for Cephalometric Landmarks Localization in Orthodontics
 
 PyTorch implementation for cephalometric landmark detection on ISBI2015 and WebCeph2k datasets.
 
@@ -24,7 +24,7 @@ git clone https://github.com/switch626/WebCeph2k
 ```
 
 ### Preparing Datasets
-Download the dataset from ![BaiduYun]{It's a null link for test}.
+Download the dataset from [BaiduYun][1].
 
 ### Usage
 
@@ -44,3 +44,4 @@ Download the dataset from ![BaiduYun]{It's a null link for test}.
 
 ## Acknowledgments
 
+[1]:www.baidu.com
