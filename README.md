@@ -13,14 +13,15 @@ Cephalometric landmark detection is a critical and arduous task in the realm of 
 
 ## Getting Started
 ### Installation
-- Install python packages`
-```bash
-pip3 install -r requirements.txt
-```
 
 - Clone this repo:
 ```bash
 git clone https://github.com/switch626/WebCeph2k
+```
+
+- Install python packages`
+```bash
+pip3 install -r requirements.txt
 ```
 
 ### Preparing Datasets
