@@ -25,7 +25,8 @@ pip3 install -r requirements.txt
 ```
 
 ### Preparing Datasets
-Download the dataset from [BaiduYun][1].
+Download the dataset from [BaiduYun][1]. Password:wc2k
+or [][2]. Password:
 
 ### Usage
 
@@ -45,4 +46,5 @@ Download the dataset from [BaiduYun][1].
 
 ## Acknowledgments
 
-[1]:www.baidu.com
+[1]:https://pan.baidu.com/s/1kQMeFARM-hh1bF-lUU7u3A?pwd=wc2k
+[2]:https://drive.google.com/drive/folders/1hy1J-Bb9gc9xD4krt_6e9tsPzclDuYNl?usp=sharing
