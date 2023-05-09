@@ -25,8 +25,7 @@ pip3 install -r requirements.txt
 ```
 
 ### Preparing Datasets
-Download the dataset from [BaiduYun][1]. Password:wc2k
-or [GoogleDrive][2].
+Download the dataset from [BaiduYun][1](Password:wc2k) or from [GoogleDrive][2].
 
 ### Usage
 
