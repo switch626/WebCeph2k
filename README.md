@@ -32,10 +32,14 @@ Download the dataset from [BaiduYun][1](Password:wc2k) or from [GoogleDrive][2].
 
 
 ### Train
-
+```
+python tools/train.py --cfg experinmets/ceph/training_testing.yaml
+```
 
 ### Test
-
+```
+python tools/test.py --cfg experinmets/ceph/training_testing.yaml --model-file ./Weighs/ceph_2k.pth
+```
 
 ### Evaluation
 
