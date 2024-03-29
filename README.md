@@ -25,7 +25,7 @@ pip3 install -r requirements.txt
 ```
 
 ### Preparing Datasets
-Download the dataset from [BaiduYun][1](Password:wc2k) or from [GoogleDrive][2].
+Download the dataset from [BaiduYun][1](Password:wc2k). (Update CSV file in dataset)
 
 ### Usage
 
@@ -50,4 +50,3 @@ python tools/test.py --cfg experinmets/ceph/training_testing.yaml --model-file .
 ## Acknowledgments
 
 [1]:https://pan.baidu.com/s/1kQMeFARM-hh1bF-lUU7u3A?pwd=wc2k
-[2]:https://drive.google.com/drive/folders/1hy1J-Bb9gc9xD4krt_6e9tsPzclDuYNl?usp=sharing
