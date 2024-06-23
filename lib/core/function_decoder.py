@@ -153,11 +153,6 @@ def validate(config, val_loader, model, criterion, epoch, writer_dict):
     failure_008_rate = count_failure_008 / nme_count
     failure_010_rate = count_failure_010 / nme_count
 
-    msg = 'Valid Epoch {} time:{:.4f} loss:{:.4f} nme:{:.4f} [008]:{:.4f} ' \
-          '[010]:{:.4f}'.format(epoch, batch_time.avg, losses.avg, nme,
-                                failure_008_rate, failure_010_rate)
-    logger.info(msg)
-
     sum_total = 0
     for idx in range(SDR_List.shape[0]):
         sum_total += SDR_List[idx][0]
@@ -188,6 +183,11 @@ def validate(config, val_loader, model, criterion, epoch, writer_dict):
         writer.add_scalar('valid_loss', losses.avg, global_steps)
         writer.add_scalar('valid_nme', nme, global_steps)
         writer_dict['valid_global_steps'] = global_steps + 1
+
+    msg = 'Valid Epoch {} time:{:.4f} loss:{:.4f} nme:{:.4f} [008]:{:.4f} ' \
+          '[010]:{:.4f}'.format(epoch, batch_time.avg, losses.avg, nme,
+                                failure_008_rate, failure_010_rate)
+    logger.info(msg)
 
     return nme, predictions
 
