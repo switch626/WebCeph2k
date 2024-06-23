@@ -1,1 +1,82 @@
 
+GPUS: (0, )
+WORKERS: 4
+PRINT_FREQ: 50
+
+DATASET:
+  DATASET: WebCeph2k
+  ROOT: './data/images'
+  TRAINSET: './data/Github_csv/TrainingData_roi.csv'
+  VALIDSET: './data/Github_csv/ValidData_roi.csv'
+  TESTSET: './data/Github_csv/TestData_roi.csv'
+  FLIP: false
+  SCALE_FACTOR: 0.25
+  ROT_FACTOR: 30
+MODEL:
+  NAME: 'hrnet'
+  NUM_JOINTS: 26
+  INIT_WEIGHTS: true
+  PRETRAINED: './Pretrained_Model/hrnetv2_pretrained/hrnetv2_w64_imagenet_pretrained.pth'
+  SIGMA: 1.0 
+  IMAGE_SIZE:
+    - 800
+    - 800
+  HEATMAP_SIZE:
+    - 200
+    - 200
+  EXTRA:
+    FINAL_CONV_KERNEL: 1
+    STAGE2:
+      NUM_MODULES: 1
+      NUM_BRANCHES: 2
+      BLOCK: BASIC
+      NUM_BLOCKS:
+        - 4
+        - 4
+      NUM_CHANNELS:
+        - 64
+        - 128
+      FUSE_METHOD: SUM
+    STAGE3:
+      NUM_MODULES: 4
+      NUM_BRANCHES: 3
+      BLOCK: BASIC
+      NUM_BLOCKS:
+        - 4
+        - 4
+        - 4
+      NUM_CHANNELS:
+        - 64
+        - 128
+        - 256
+      FUSE_METHOD: SUM
+    STAGE4:
+      NUM_MODULES: 3
+      NUM_BRANCHES: 4
+      BLOCK: BASIC
+      NUM_BLOCKS:
+        - 3
+        - 3
+        - 3
+        - 3
+      NUM_CHANNELS:
+        - 64
+        - 128
+        - 256
+        - 512
+      FUSE_METHOD: SUM
+TRAIN:
+  BATCH_SIZE_PER_GPU: 4
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 80
+  RESUME: true
+  OPTIMIZER: 'adam'
+  LR: 0.0001
+  WD: 0.0
+  LR_STEP: [30, 50]
+  MOMENTUM: 0.0
+  NESTEROV: false
+TEST:
+  BATCH_SIZE_PER_GPU: 4
+
