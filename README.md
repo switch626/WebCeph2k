@@ -29,7 +29,11 @@ Download the dataset from [BaiduYun][1](Password:wc2k). (Update CSV file in data
 
 ### Usage
 
+Prepare the WebCeph2k dataset or the ISBI2015 dataset.
 
+```
+python GetROI_before_train.py
+```
 
 ### Train
 ```
@@ -38,15 +42,10 @@ python tools/train.py --cfg experinmets/ceph/training_testing.yaml
 
 ### Test
 ```
-python tools/test.py --cfg experinmets/ceph/training_testing.yaml --model-file ./Weighs/ceph_2k.pth
+python tools/test.py --cfg experinmets/ceph/training_testing.yaml --model-file ./output/training_testing/BestModel.pth
 ```
 
-### Evaluation
-
-
-### Example
-
-
 ## Acknowledgments
+Great thanks for these papers and their open-source codes：[HR-Net](https://github.com/HRNet), [AAOF Craniofacial Growth Legacy Collection](https://aaoflegacycollection.org/aaof_home.html).
 
 [1]:https://pan.baidu.com/s/1kQMeFARM-hh1bF-lUU7u3A?pwd=wc2k
