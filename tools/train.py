@@ -136,7 +136,7 @@ def main():
         best_nme = min(nme, best_nme)
         best_nme_t = nme_t if is_best else best_nme_t
 
-        logger.info("best: {},  ===NowValidNME: {:.3f},  ===BestValidNME: {:.3f},  ===NowTestNME:{:.3f}, ===BestTestNME:{:.3f}, ===BestEpoch:{}".format(is_best,nme,best_nme,nme_t,best_nme_t,best_epoch)) 
+        logger.info("best: {},  ===NowValidNME: {:.3f},  ===BestValidNME: {:.3f},  ===NowTestNME:{:.3f}, ===BestTestNME:{:.3f}, ===BestEpoch:{}".format(is_best,nme,best_nme,nme_t,best_nme_t,best_epoch))
         print()
         if is_best:
             final_model_state_file = os.path.join(final_output_dir, 'BestModel.pth')
