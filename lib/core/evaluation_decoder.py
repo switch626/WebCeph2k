@@ -56,7 +56,7 @@ def get_preds(scores):
 
 def compute_nme(preds, meta, SDR_List, Each_Point, PCK_Curve, isTest=False):
 
-    targets = meta['pts'].cpu().numpy()
+    target = meta['pts'].cpu().numpy()
     N = preds.shape[0]
     L = preds.shape[1]
     rmse = np.zeros(N)
